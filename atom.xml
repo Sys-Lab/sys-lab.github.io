@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>SysLab</title>
+  <subtitle>不一样的我们</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://www.syslab.us/"/>
+  <updated>2016-06-03T13:20:57.000Z</updated>
+  <id>http://www.syslab.us/</id>
+  
+  <author>
+    <name>SysLab</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SysLab技术分享-Vol.03—Ajax</title>
+    <link href="http://www.syslab.us/2016/05/12/exchange-meeting-3-ajax/"/>
+    <id>http://www.syslab.us/2016/05/12/exchange-meeting-3-ajax/</id>
+    <published>2016-05-12T12:44:32.000Z</published>
+    <updated>2016-06-03T13:20:57.000Z</updated>
+    
+    <content type="html">&lt;p&gt;HTTP请求&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;一个完整的HTTP请求过程，通常有下面7个步骤：
+    1.建立TCP连接
+    2.web浏览器向web服务器发送请求命令
+    3.web浏览器发送请求头信息
+    4.web服务器应答
+    5.web服务器发送应答头信息
+    6.web服务器向浏览器发送数据
+    7.web服务器关闭TCP连接
+一个HTTP请求一般由四部分组成：
+    1.HTTP请求的方法或动作，比如是GET还是POST
+    2.正在请求的URL
+    3.请求头，包含一些客户端环境信息，身份验证信息等
+    4.请求体，也就是请求正文
+&lt;/code&gt;&lt;/pre&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;GET：一般用于信息获取,使用url传递参数&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;对所发送的信息的数量也有腌制，一般在2000个字符
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;POST：一般用于修改服务器上的资源.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;对所发送信息的数量无限制
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;HTTP相应一般由三个部分组成：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1.一个数字和文字组成的状态码，用来显示请求是成功还是失败
+2.响应头，响应头也和请求头一样包含许多有用的信息，例如服务器类型，日期时间，内容类型和长度等
+3.响应体，也就是响应正文
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;HTTP状态码由三位数字构成:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1xx : 信息类，表示收到web浏览器请求，正在进一步的处理中
+2xx : 成功，表示用户请求被正确接受，理解和处理。例如 200
+3xx : 重定向，表示请求没有成功，客户必须采取进一步的动作
+4xx : 客户端错误，表示客户端提交的请求有错误。例如 404
+5xx : 服务器错误，表示服务器不能完成对请求的处理。例如 500
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;XMLHttpRequest发送请求&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;open(method,url,async)
+send(string)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;XMLHttpRequest取得响应&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;responseText : 获得字符串形式的响应数据
+responseXML  : 获得XML形式的响应数据
+status和statusText : 以数字和文本形式返回HTTP状态码
+getAllResponseHeader() : 获取所有的响应报头
+getResponseHeader() : 查询响应中的某个字段的值
+readyState属性:
+    0 : 请求未初始化,open还没有调用
+    1 : 服务器连接已建立,open已经调用了
+    2 : 请求已接受,也就是接收到头信息了
+    3 : 请求处理中,也就是接收到响应主体了
+    4 : 请求已完成,且响应已就绪,也就是响应完成了
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;JSON基本概念&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;JSON : JavaScript对象表示法(JavaScript Object Notation)
+JSON是存储和交换文本信息的语法,类似XML。它采用健值对的方式来组织,易于人们阅读和编写,同时也易于机器解析和生成
+JSON是独立于语言的,也就是说不管什么语言,都可以解析JSON,只需要按JSON的规则来就行
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;JSON与XML比较&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;json长度短
+json读写的速度更快
+json可以用js直接解析
+JSONLint校验json的在线工具
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Github地址: &lt;a href=&quot;https://github.com/ghostwolfs/ajax-demo&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/ghostwolfs/ajax-demo&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;HTTP请求&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;一个完整的HTTP请求过程，通常有下面7个步骤：
+    1.建立TCP连接
+    2.web浏览器向web服务器发送请求命令
+    3.web浏览器发送请求头信息
+    4.web服务器应答
+    5.web服务器发送应答头信息
+    6.web服务器向浏览器发送数据
+    7.web服务器关闭TCP连接
+一个HTTP请求一般由四部分组成：
+    1.HTTP请求的方法或动作，比如是GET还是POST
+    2.正在请求的URL
+    3.请求头，包含一些客户端环境信息，身份验证信息等
+    4.请求体，也就是请求正文
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+    
+      <category term="交流会" scheme="http://www.syslab.us/tags/%E4%BA%A4%E6%B5%81%E4%BC%9A/"/>
+    
+      <category term="前端" scheme="http://www.syslab.us/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SysLab技术分享-Vol.02—拖延症与时间管理</title>
+    <link href="http://www.syslab.us/2016/04/04/exchange-meeting-2-procrastination-and-time-manage/"/>
+    <id>http://www.syslab.us/2016/04/04/exchange-meeting-2-procrastination-and-time-manage/</id>
+    <published>2016-04-04T13:09:58.000Z</published>
+    <updated>2016-06-03T13:20:27.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;交流&quot;&gt;&lt;a href=&quot;#交流&quot; class=&quot;headerlink&quot; title=&quot;交流&quot;&gt;&lt;/a&gt;交流&lt;/h2&gt;&lt;p&gt;交流-思维-批判性思维-强势批判性思维&lt;/p&gt;
+&lt;p&gt;批判性思维：就是在吸取外部信息的时候，要注意根据自己的需求提出适当的问题，在不断提问和回答的过程中得到思维的训练和对新领域的认知。&lt;/p&gt;
+&lt;p&gt;如果你是用批判性思维捍卫自己的观点，那么你就是在使用弱势批判性思维。为什么说这种思维方式是弱势的呢？是因为使用这种思维方式不是在追求一个问题的最佳解决方法，也不是关于某个话题的正确观点，而是抵制反对那些与你意见不同的人，让那些跟你意见不同的人认输。只要跟我意见不同，马上就把他给批判一番，很危险。OK，这是弱势批判性思维。&lt;br&gt;那强势批判性思维呢？强势批判性思维是要我们一视同仁地去质疑一切主张，甚至包括我们自己的，去辩证地看待围绕某个问题的所有观点。这样，我们才能做到既不人云亦云，也不自欺欺人。而我们的目的是得到一个正确的观点，在这个过程中是可以去修正改变自己的观点的。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;学习&quot;&gt;&lt;a href=&quot;#学习&quot; class=&quot;headerlink&quot; title=&quot;学习&quot;&gt;&lt;/a&gt;学习&lt;/h2&gt;&lt;p&gt;know-do-be&lt;/p&gt;
+&lt;p&gt;内部：learning-practice-rethink&lt;br&gt;外部：teach-train-inspire&lt;/p&gt;
+&lt;p&gt;获得什么：knowledge-skill-wisdom&lt;/p&gt;
+&lt;h2 id=&quot;拖延症&quot;&gt;&lt;a href=&quot;#拖延症&quot; class=&quot;headerlink&quot; title=&quot;拖延症&quot;&gt;&lt;/a&gt;拖延症&lt;/h2&gt;&lt;p&gt;科学知识人文化，人文知识科学化。科学知识人文化就是在教授自然科学的过程中引入更多人文的内容；人文知识科学化就是拒绝经验主义，拒绝鸡汤，用科学精神去看待人文内容。&lt;/p&gt;
+&lt;p&gt;用科学的方法来理解拖延症，站在科学的角度来看，我们要做的第一件事是什么？&lt;/p&gt;
+&lt;h3 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h3&gt;&lt;p&gt;“一切从定义出发。”&lt;/p&gt;
+&lt;p&gt;所以拖延症到底有没有准确的定义呢？&lt;br&gt;其实没有权威的定义。因为拖延症是一个网络名词，而不是心理学术语。起源是豆瓣的一个小组，所以从本质上来说跟贴吧的一些梗是一样的。&lt;/p&gt;
+&lt;h3 id=&quot;procrastination&quot;&gt;&lt;a href=&quot;#procrastination&quot; class=&quot;headerlink&quot; title=&quot;procrastination&quot;&gt;&lt;/a&gt;procrastination&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;有害的&lt;/li&gt;
+&lt;li&gt;无必要(自愿的并且可以被)&lt;/li&gt;
+&lt;li&gt;推迟&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;会有有益的拖延&lt;/p&gt;
+&lt;p&gt;无必要的。耽搁不是拖延。如果将一天的工作量排到25小时，那肯定会推迟。还有，有些事情不是你能掌控的。&lt;/p&gt;
+&lt;p&gt;（懒不是拖延，耽搁不是拖延，故意推迟也不是）&lt;/p&gt;
+&lt;h3 id=&quot;原因&quot;&gt;&lt;a href=&quot;#原因&quot; class=&quot;headerlink&quot; title=&quot;原因&quot;&gt;&lt;/a&gt;原因&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;完美主义者&lt;/li&gt;
+&lt;li&gt;自我感觉良好（现在不做，过段时间就会做，将做这件事的痛苦推迟到以后了）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;做作业-写完作业后就可以看片、出去浪、玩游戏&lt;br&gt;做项目-做完项目以后就会学到很多东西，或者如释重负，终于不用再为项目操心了&lt;/p&gt;
+&lt;p&gt;但是，这些事情都是没有发生的。我们产生了一种错觉，好像这种事情已经发生了，我们能够从中获得一种愉悦的感觉。&lt;/p&gt;
+&lt;p&gt;将做这件事情的痛苦推迟了，将做完这件事情的愉悦的感觉提前了。&lt;/p&gt;
+&lt;h3 id=&quot;对“症”下药&quot;&gt;&lt;a href=&quot;#对“症”下药&quot; class=&quot;headerlink&quot; title=&quot;对“症”下药&quot;&gt;&lt;/a&gt;对“症”下药&lt;/h3&gt;&lt;p&gt;针对完美主义者：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;好的开始是成功的一半，坏的开始是完成的一半&lt;/li&gt;
+&lt;li&gt;即刻开始行动&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;针对自我感觉良好（是因为觉得自己目前的状态不适合干活）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;状态容易受行动影响&lt;/li&gt;
+&lt;li&gt;放弃那种做事的动力状态必须与手头的任务相符的误解。事实上，社会心理学家已经证实态度跟随行为变化比行为跟随态度变化的情况更多。当你按照既定意图开始行动时，你会发现你的态度和动力都会发生变化。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;评判拖延症的标准在每个人自己的心里，别人是没法评价的&lt;/p&gt;
+&lt;h2 id=&quot;时间管理&quot;&gt;&lt;a href=&quot;#时间管理&quot; class=&quot;headerlink&quot; title=&quot;时间管理&quot;&gt;&lt;/a&gt;时间管理&lt;/h2&gt;&lt;h3 id=&quot;Todo-list&quot;&gt;&lt;a href=&quot;#Todo-list&quot; class=&quot;headerlink&quot; title=&quot;Todo list&quot;&gt;&lt;/a&gt;Todo list&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;重要紧急&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Calendar&quot;&gt;&lt;a href=&quot;#Calendar&quot; class=&quot;headerlink&quot; title=&quot;Calendar&quot;&gt;&lt;/a&gt;Calendar&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;随心就好&lt;/li&gt;
+&lt;li&gt;不要排满&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;面对太多等待去做的事情，人的第一反应就是将时间表排得尽可能得紧凑，以便将所有事情都安排进去。如果你安排得不够紧凑，就会感觉好像没有尽力去做事情一样。&lt;/p&gt;
+&lt;p&gt;自我改变是一个前进两步，后退一步的过程。短期内看不到效果是很正常的，固有的习惯，甚至固有的生活方式，性格是很难改变。&lt;/p&gt;
+&lt;p&gt;强势批判性思维 -&amp;gt; 提问&lt;/p&gt;
+&lt;p&gt;know-do-be的过程 –&amp;gt; practice&lt;/p&gt;
+&lt;p&gt;Practice + Rethink&lt;/p&gt;
+&lt;p&gt;参考：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;《拖拉一点也无妨》&lt;br&gt;挺好玩的一本书，教你高效“拖延”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;《战胜拖延症》&lt;br&gt;系统性地介绍了拖延症&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;《学会提问》&lt;br&gt;批判性思维以及找出别人观点中存在的问题&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;链接：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.douban.com/group/topic/76427790/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;你还在被盗版的拖延症概念误导吗？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.zhouchao.me/read-solving-the-procrastination-puzzle/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.zhouchao.me/read-solving-the-procrastination-puzzle/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.zhouchao.me/the-art-of-procrastination/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.zhouchao.me/the-art-of-procrastination/&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;交流&quot;&gt;&lt;a href=&quot;#交流&quot; class=&quot;headerlink&quot; title=&quot;交流&quot;&gt;&lt;/a&gt;交流&lt;/h2&gt;&lt;p&gt;交流-思维-批判性思维-强势批判性思维&lt;/p&gt;
+&lt;p&gt;批判性思维：就是在吸取外部信息的时候，要注意根据自己的需求提出适当的问题，在不断提问和回答的过程中得到思维的训练和对新领域的认知。&lt;/p&gt;
+&lt;p&gt;如果你是用批判性思维捍卫自己的观点，那么你就是在使用弱势批判性思维。为什么说这种思维方式是弱势的呢？是因为使用这种思维方式不是在追求一个问题的最佳解决方法，也不是关于某个话题的正确观点，而是抵制反对那些与你意见不同的人，让那些跟你意见不同的人认输。只要跟我意见不同，马上就把他给批判一番，很危险。OK，这是弱势批判性思维。&lt;br&gt;那强势批判性思维呢？强势批判性思维是要我们一视同仁地去质疑一切主张，甚至包括我们自己的，去辩证地看待围绕某个问题的所有观点。这样，我们才能做到既不人云亦云，也不自欺欺人。而我们的目的是得到一个正确的观点，在这个过程中是可以去修正改变自己的观点的。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="交流会" scheme="http://www.syslab.us/tags/%E4%BA%A4%E6%B5%81%E4%BC%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SysLab技术分享-Vol.01—代码规范相关</title>
+    <link href="http://www.syslab.us/2016/03/20/exchange-meeting-1-coding-conventions-and-workflow/"/>
+    <id>http://www.syslab.us/2016/03/20/exchange-meeting-1-coding-conventions-and-workflow/</id>
+    <published>2016-03-20T12:13:38.000Z</published>
+    <updated>2016-06-03T12:48:21.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;1-文档&quot;&gt;&lt;a href=&quot;#1-文档&quot; class=&quot;headerlink&quot; title=&quot;1. 文档&quot;&gt;&lt;/a&gt;1. 文档&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;需求文档&lt;/li&gt;
+&lt;li&gt;开发文档&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;TAB个数，4个还是8个，为了git审核&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;变量命名&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;匈牙利命名&lt;/li&gt;
+&lt;li&gt;第一个字母定义变量类型&lt;br&gt;mUserId，m表示成员变量，i表示整型变量&lt;br&gt;主要用在C和C++&lt;br&gt;小驼峰&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;第一个单词首字母小写，其他首字母大写&lt;br&gt;大驼峰&lt;/p&gt;
+&lt;p&gt;全单词首字母大写&lt;br&gt;变量命名不能用拼音&lt;/p&gt;
+&lt;p&gt;方法命名&lt;/p&gt;
+&lt;p&gt;驼峰命名&lt;/p&gt;
+&lt;p&gt;get，set&lt;br&gt;Restful命名方式&lt;/p&gt;
+&lt;p&gt;资源状态转化&lt;br&gt;杜绝用动词&lt;br&gt;loopback–nodejs的restful框架&lt;br&gt;花括号换行&lt;/p&gt;
+&lt;p&gt;C和C++一般要换行&lt;br&gt;开发规范定好&lt;br&gt;JS不换行&lt;/p&gt;
+&lt;h1 id=&quot;2-GIT-COMMIT规范&quot;&gt;&lt;a href=&quot;#2-GIT-COMMIT规范&quot; class=&quot;headerlink&quot; title=&quot;2. GIT COMMIT规范&quot;&gt;&lt;/a&gt;2. GIT COMMIT规范&lt;/h1&gt;&lt;p&gt;Add XXX&lt;br&gt;fix #1234&lt;br&gt;modify XXXX&lt;br&gt;delete XXXX&lt;/p&gt;
+&lt;h1 id=&quot;3-代码TIPS&quot;&gt;&lt;a href=&quot;#3-代码TIPS&quot; class=&quot;headerlink&quot; title=&quot;3. 代码TIPS&quot;&gt;&lt;/a&gt;3. 代码TIPS&lt;/h1&gt;&lt;p&gt;注释&lt;/p&gt;
+&lt;p&gt;尽量少写注释&lt;br&gt;魔数问题&lt;br&gt;用英文写注释&lt;br&gt;空行&lt;/p&gt;
+&lt;p&gt;适当使用空行&lt;br&gt;一个函数内不同功能块空一行&lt;br&gt;便于阅读代码&lt;br&gt;DRY原则&lt;/p&gt;
+&lt;p&gt;Do not Repeat Yourself，不要复制和重复代码&lt;br&gt;如果需求类似，提出来做成一个单独的function&lt;br&gt;For循环迭代&lt;/p&gt;
+&lt;p&gt;先写迭代for循环，再补充循环变量&lt;br&gt;语法提示插件&lt;/p&gt;
+&lt;h1 id=&quot;4-单元测试&quot;&gt;&lt;a href=&quot;#4-单元测试&quot; class=&quot;headerlink&quot; title=&quot;4. 单元测试&quot;&gt;&lt;/a&gt;4. 单元测试&lt;/h1&gt;&lt;p&gt;测试便于检查代码&lt;/p&gt;
+&lt;h1 id=&quot;5-GIT-FLOW&quot;&gt;&lt;a href=&quot;#5-GIT-FLOW&quot; class=&quot;headerlink&quot; title=&quot;5. GIT FLOW&quot;&gt;&lt;/a&gt;5. GIT FLOW&lt;/h1&gt;&lt;p&gt;leader建主仓库&lt;br&gt;开发人员fork到自己名下&lt;br&gt;从自己仓库下载到本地&lt;br&gt;本地push到自己仓库&lt;br&gt;提交Pull Request&lt;br&gt;leader审核测试代码，merge进入主仓库&lt;br&gt;也可以用分支代替&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      主要分享关于代码规范和开发流程相关的东西
+    
+    </summary>
+    
+    
+      <category term="代码规范" scheme="http://www.syslab.us/tags/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/"/>
+    
+      <category term="项目流程" scheme="http://www.syslab.us/tags/%E9%A1%B9%E7%9B%AE%E6%B5%81%E7%A8%8B/"/>
+    
+      <category term="交流会" scheme="http://www.syslab.us/tags/%E4%BA%A4%E6%B5%81%E4%BC%9A/"/>
+    
+  </entry>
+  
+</feed>
