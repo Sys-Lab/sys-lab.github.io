@@ -6,21 +6,42 @@
   <title>SysLab技术分享-Vol.01—代码规范相关 | SysLab | 不一样的我们</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="代码规范,项目流程,交流会">
+  <meta name="keywords" content="交流会,代码规范,项目流程">
   <meta name="description" content="主要分享关于代码规范和开发流程相关的东西">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SysLab技术分享-Vol.01—代码规范相关">
 <meta property="og:url" content="http://www.syslab.us/2016/03/20/exchange-meeting-1-coding-conventions-and-workflow/index.html">
 <meta property="og:site_name" content="SysLab">
 <meta property="og:description" content="主要分享关于代码规范和开发流程相关的东西">
-<meta property="og:updated_time" content="2016-06-03T12:48:21.000Z">
+<meta property="og:updated_time" content="2016-06-03T13:22:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SysLab技术分享-Vol.01—代码规范相关">
 <meta name="twitter:description" content="主要分享关于代码规范和开发流程相关的东西">
   
     <link rel="alternative" href="/atom.xml" title="SysLab" type="application/atom+xml">
   
-  <meta name="summary" content="A studio dedicated to outsourced web &amp; mobile app development, also contributing to opensource projects.">
+  <meta name="summary" content="&lt;h2 id=&quot;1-文档&quot;&gt;&lt;a href=&quot;#1-文档&quot; class=&quot;headerlink&quot; title=&quot;1. 文档&quot;&gt;&lt;/a&gt;1. 文档&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;需求文档&lt;/li&gt;
+&lt;li&gt;开发文档&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;TAB个数，4个还是8个，为了git审核&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;变量命名&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;匈牙利命名&lt;/li&gt;
+&lt;li&gt;第一个字母定义变量类型&lt;/li&gt;
+&lt;li&gt;mUserId，m表示成员变量，i表示整型变量&lt;/li&gt;
+&lt;li&gt;主要用在C和C++&lt;/li&gt;
+&lt;li&gt;小驼峰&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;第一个单词首字母小写，其他首字母大写&lt;br&gt;大驼峰&lt;/p&gt;
+&lt;p&gt;全单词首字母大写&lt;br&gt;变量命名不能用拼音&lt;/p&gt;
+&lt;p&gt;方法命名&lt;/p&gt;
+&lt;p&gt;驼峰命名&lt;/p&gt;
+&lt;p&gt;get，set&lt;br&gt;Restful命名方式&lt;/p&gt;
+&lt;p&gt;资源状态转化&lt;br&gt;杜绝用动词&lt;br&gt;loopback–nodejs的restful框架&lt;br&gt;花括号换行&lt;/p&gt;
+&lt;p&gt;C和C++一般要换行&lt;br&gt;开发规范定好&lt;br&gt;JS不换行&lt;/p&gt;">
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -187,7 +208,10 @@
 <li><p>变量命名</p>
 <ul>
 <li>匈牙利命名</li>
-<li>第一个字母定义变量类型<br>mUserId，m表示成员变量，i表示整型变量<br>主要用在C和C++<br>小驼峰</li>
+<li>第一个字母定义变量类型</li>
+<li>mUserId，m表示成员变量，i表示整型变量</li>
+<li>主要用在C和C++</li>
+<li>小驼峰</li>
 </ul>
 </li>
 </ul>
@@ -198,6 +222,7 @@
 <p>get，set<br>Restful命名方式</p>
 <p>资源状态转化<br>杜绝用动词<br>loopback–nodejs的restful框架<br>花括号换行</p>
 <p>C和C++一般要换行<br>开发规范定好<br>JS不换行</p>
+<a id="more"></a>
 <h1 id="2-GIT-COMMIT规范"><a href="#2-GIT-COMMIT规范" class="headerlink" title="2. GIT COMMIT规范"></a>2. GIT COMMIT规范</h1><p>Add XXX<br>fix #1234<br>modify XXXX<br>delete XXXX</p>
 <h1 id="3-代码TIPS"><a href="#3-代码TIPS" class="headerlink" title="3. 代码TIPS"></a>3. 代码TIPS</h1><p>注释</p>
 <p>尽量少写注释<br>魔数问题<br>用英文写注释<br>空行</p>
